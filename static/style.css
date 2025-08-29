@@ -134,40 +134,36 @@ padding: 10px;
 }
 
 
-/* Estilos para el pie de página */
+/* ======================
+   FOOTER
+====================== */
 footer {
- text-align:end;
- padding: 10px;
- background: #323232;
- color: #fff;
+    background-color: #323232;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
 }
 
-  /* Estilos para la sección de contacto */
-  .contac-section{
-  text-align:initial;
-  display: flex;/*Poner texto enfrente del otro*/
-  gap: 30px;/*Espacio entre los textos*/
-  margin-left:10px;
-  justify-content: space-around;
-  }
+.contac-section {
+    flex-wrap: wrap;
+    gap: 20px;
+   text-align: center;
+    margin-bottom: 20px;
+}
 
-  .contactanos, 
-  .Direccion{
-  display:flex;/*Poner texto enfrente del otro*/
-  gap: 80px;/*Espacio entre los textos*/
-  }
+.contac-section div {
+    min-width: 200px;
+}
 
-  .Acercade{
-     margin-top: 10px;/*Espacio en la parte de arriba*/
-  }
-
-/* Contenedor del icono + número */
 .img-tel,
-.img-direc{
-  display: flex;          /* Activa Flexbox para poner elementos en fila */
-  align-items: center;    /* Centra verticalmente el icono y el número */
-  gap: 8px;               /* Espacio entre la imagen y el número */
-  color: #ffffff;         /* Color del texto (amarillo similar a tu ejemplo) */
-  font-weight: bold;      /* Hace el número más visible */
+.img-direc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-self:center;
+}
+.contactanos{
+      justify-content: center;
+
 }
 
