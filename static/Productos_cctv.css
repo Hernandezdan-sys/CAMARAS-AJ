@@ -208,10 +208,9 @@ footer {
 }
 
 .contac-section {
-    display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+   text-align: center;
     margin-bottom: 20px;
 }
 
@@ -224,6 +223,11 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-self:center;
+}
+.contactanos{
+      justify-content: center;
+
 }
 
 /* ======================
