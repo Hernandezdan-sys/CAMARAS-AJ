@@ -1,212 +1,254 @@
-/* Evitar desbordes en general */
-body, html {
-  overflow-x: hidden;
-}
-
-/* Para tablets y pantallas medianas */
-@media (max-width: 1024px) {
-}
-
-/* Contenedor de logo + menú */
-.nav-container {
-  display: flex;
-  justify-content:space-around; /* logo a la izq, menú a la der */
-  align-items: center;
-  background-color: #ffffff;
-  position: fixed;   /* siempre arriba */
-  top: 0;
-  left: 0;
-  width: 118%;
-  z-index: 0;
-}
-
-/* Ajuste logo */
-.logo{
-  height: 70px;
-  width: auto;
-}
-
-/* Menú */
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+/* =============================
+   ESTILOS GENERALES
+============================= */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.menu a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Para que el contenido no quede escondido detrás del navbar fijo */
 body {
-  padding-top: 55px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f7f7f7;
+  color: #333;
 }
 
-.tex{
-  font-family:fantasy; /* Cambia la fuente si lo deseas */
-font-size: 36px; /* Tamaño base */
-background-color:rgb(51, 51, 51);
- color: #fff;
- text-align: center;
- padding: 30px 20px;
+/* =============================
+   NAVBAR
+============================= */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #323232;
+  padding: 10px 20px;
 }
 
-.texto{
-font-family:fantasy; /* Cambia la fuente si lo deseas */
-font-size: 36px; /* Tamaño base */
-background-color: #000000; /* Un color llamativo para el fondo */
-color: #fff;
-text-align: center;
-padding: 30px 20px;
+.logo img {
+  max-width: 120px;
+  height: auto;
 }
 
-.cajas-ventas{
-    text-align: center;
-    padding: 5px;
-    background-color:rgb(51, 51, 51);
-    color: rgb(255, 255, 255);
+.navbar .menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.cajas-prod{
-    margin-top: 20px;
+.navbar .menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #00bcd4;
+}
+
+/* =============================
+   TÍTULO PRINCIPAL
+============================= */
+.tex {
   text-align: center;
+  padding: 40px 20px;
+  background: #e8f0f1;
 }
 
-.Paquete1,
-.Paquete2,
-.Paquete3{
-  text-align: center; /* Centra el texto horizontalmente */
-  border: 2px solid #080808; /* Borde de 2px de ancho, sólido y de color negro */
-  padding: 10px; /* Espacio interno para separar el contenido del borde */
-  margin: 20px; /* Margen para separar la tarjeta de otros elementos */
-  border-radius: 5px; /* Opcional: Redondea las esquinas del borde */
-  display: inline-block;
-  background-color: rgb(255, 255, 255); /* Fondo */
-  color: rgb(0, 0, 0); /* Color de letra */
+.tex h1 {
+  font-size: 32px;
+  color: #222;
 }
 
-.Titulo{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size: 18px; 
+/* =============================
+   TEXTO INFORMATIVO
+============================= */
+.cajas-ventas {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.8;
 }
 
-/* Lista personalizada */
+/* =============================
+   CAJAS DE PRODUCTOS
+============================= */
+.cajas-prod {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px auto;
+  max-width: 1200px;
+  padding: 10px;
+}
+
+.cajas-prod div {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.cajas-prod div:hover {
+  transform: translateY(-5px);
+}
+
+.cajas-prod img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
 .lista-equipos {
-  list-style-type:circle;  /* Viñetas con puntos */
-  padding-left: center;     /* Espacio a la izquierda */
-  font-size: 15px;         /*Tmaño de letra  */
-  line-height: 1.0;       /* Espaciado entre líneas */
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 20px;
 }
 
-/* Opcional: estilo de los ítems */
-.lista-equipos li {
-  margin-bottom: 10px;
-}
-
+/* =============================
+   SECCIÓN PUNTO DE VENTA
+============================= */
 .seccion-punto-venta {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 40px;
-  background: #e6e6e6; /* fondo gris claro */
-  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  gap: 30px;
 }
 
-.columna {
+.seccion-punto-venta .columna {
   flex: 1;
 }
 
-.columna.izquierda img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 5px;
+.seccion-punto-venta img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-.columna.derecha h1 {
-  font-size: 22px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.columna.derecha p {
-  font-size: 15px;
-  line-height: 1.6;
+.seccion-punto-venta h1 {
+  font-size: 24px;
   margin-bottom: 15px;
-  color: #444;
 }
 
-/* Texto con fondo azul */
-.explicacion {
-  padding: 10px;
-  border-radius: 4px;
-  color: #003366;
-  font-weight: bold;
+.seccion-punto-venta p {
+  margin-bottom: 15px;
 }
 
-/* Botón */
 .btn-contacto {
   display: inline-block;
-  background: #474747;
-  color: white;
-  font-weight: bold;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #fff;
+  border-radius: 5px;
   text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
 .btn-contacto:hover {
-  background: #000000;
+  background: #0097a7;
 }
 
-
-
-/* Estilos para el pie de página */
+/* =============================
+   FOOTER
+============================= */
 footer {
- text-align:end;
- padding: 10px;
- background-color: #323232;
- color: #fff;
+  background: #323232;
+  color: #fff;
+  padding: 30px 20px;
+  margin-top: 50px;
 }
 
-  /* Estilos para la sección de contacto */
-  .contac-section{
-  text-align:initial;
-  display: flex;/*Poner texto enfrente del otro*/
-  gap: 30px;/*Espacio entre los textos*/
-  margin-left:100px;
+footer h2 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+footer .contac-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+footer input, footer textarea, footer button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer button {
+  background: #00bcd4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+footer button:hover {
+  background: #0097a7;
+}
+
+.about-section {
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #555;
+  padding-top: 15px;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .seccion-punto-venta {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Móviles medianos */
+@media (max-width: 600px) {
+  .navbar .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  .contactanos, 
-  .Direccion{
-  display:flex;/*Poner texto enfrente del otro*/
-  gap: 80px;/*Espacio entre los textos*/
+  .tex h1 {
+    font-size: 24px;
   }
 
-  .Acercade{
-     margin-top: -115px;/*Espacio en la parte de arriba*/
+  .cajas-prod {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .btn-contacto {
+    width: 100%;
+    text-align: center;
   }
 
-/* Contenedor del icono + número */
-.img-tel,
-.img-direc{
-  display: flex;          /* Activa Flexbox para poner elementos en fila */
-  align-items: center;    /* Centra verticalmente el icono y el número */
-  gap: 8px;               /* Espacio entre la imagen y el número */
-  color: #ffffff;         /* Color del texto (amarillo similar a tu ejemplo) */
-  font-weight: bold;      /* Hace el número más visible */
+  footer .contac-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }

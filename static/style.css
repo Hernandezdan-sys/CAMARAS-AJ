@@ -1,52 +1,59 @@
-@media (max-width: 992px) {
+/* ======================
+   GENERAL
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Contenedor de logo + menú */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #090909;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* ======================
+   NAVBAR
+====================== */
 .nav-container {
-  display: flex;
-  justify-content:space-around; /* logo a la izq, menú a la der */
-  align-items: center;
-  background-color: #ffffff;
-  position: fixed;   /* siempre arriba */
-  top: 0;
-  left: 0;
-  width: 118%;
-  z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Ajuste logo */
-.logo{
-  height: 70px;
-  width: auto;
+.logo img {
+    height: 50px;
+    width: auto;
 }
 
-/* Menú */
 .menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
 .menu a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
 }
 
 .menu a:hover {
-  text-decoration: underline;
-}
-
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
+    text-decoration: underline;
 }
 
 /* Para que el contenido no quede escondido detrás del navbar fijo */
 body {
-  padding-top: 135px;
+  padding-top: 0px;
 }
 
 
@@ -134,9 +141,6 @@ footer {
  background: #323232;
  color: #fff;
 }
-/* Móviles y pantallas pequeñas */
-@media (max-width: 600px) {
-}
 
   /* Estilos para la sección de contacto */
   .contac-section{
@@ -154,7 +158,7 @@ footer {
   }
 
   .Acercade{
-     margin-top: -115px;/*Espacio en la parte de arriba*/
+     margin-top: 10px;/*Espacio en la parte de arriba*/
   }
 
 /* Contenedor del icono + número */
