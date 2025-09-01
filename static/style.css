@@ -2,60 +2,55 @@
    GENERAL
 ====================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 0; 
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #090909;
-    line-height: 1.5;
-    scroll-behavior: smooth;
-}
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f7f7f7;
+  color: #333;
+  scroll-behavior: smooth;
+     
+    }
 
 /* ======================
    NAVBAR
 ====================== */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #323232;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo img {
-    height: 50px;
-    width: auto;
+  max-width: 120px;
+  height: auto;
 }
 
-.menu {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+.navbar .menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.menu a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #000;
+.navbar .menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.menu a:hover {
-    text-decoration: underline;
+.navbar .menu li a:hover {
+  color: #00bcd4;
 }
-
-/* Para que el contenido no quede escondido detrás del navbar fijo */
-body {
-  padding-top: 0px;
-}
-
 
 /* Estilos para la sección encebezado */
 .Texto-inicio {
@@ -85,6 +80,7 @@ body {
 .Conectividad,
 .Hogar,
 .Negocio {
+  background-image: none;
   text-align: center; /* Centra el texto horizontalmente */
   padding: 10px; /* Espacio interno para separar el contenido del borde */
   margin: 20px; /* Margen para separar la tarjeta de otros elementos */
@@ -133,7 +129,6 @@ padding: 10px;
   margin-top: 50px; /*  ajusta el valor según el espacio que quieras parte de arriba */
 }
 
-
 /* ======================
    FOOTER
 ====================== */
@@ -151,10 +146,6 @@ footer {
     margin-bottom: 20px;
 }
 
-.contac-section div {
-    min-width: 200px;
-}
-
 .img-tel,
 .img-direc {
     display: flex;
@@ -164,6 +155,66 @@ footer {
 }
 .contactanos{
       justify-content: center;
-
 }
 
+footer input, footer textarea, footer button {
+   padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+  footer button {
+  background: #00bcd4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer button:hover {
+  background: #0097a7;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .seccion-punto-venta {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Móviles medianos */
+@media (max-width: 600px) {
+  .navbar .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tex h1 {
+    font-size: 24px;
+  }
+
+  .cajas-prod {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .btn-contacto {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .contac-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
