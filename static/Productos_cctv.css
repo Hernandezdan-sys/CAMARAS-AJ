@@ -2,18 +2,18 @@
    GENERAL
 ====================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 0px;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #090909;
-    line-height: 1.5;
-    scroll-behavior: smooth;
-}
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f7f7f7;
+  color: #333;
+  scroll-behavior: smooth;
+  margin-top: 0;    
+    }
 
 /* ======================
    NAVBAR
@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #323232;
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -31,24 +31,25 @@ body {
 }
 
 .logo img {
-    height: 50px;
-    width: auto;
+  max-width: 120px;
+  height: auto;
 }
 
-.menu {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+.navbar .menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-.menu a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #000;
+.navbar .menu li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.menu a:hover {
-    text-decoration: underline;
+.navbar .menu li a:hover {
+  color: #00bcd4;
 }
 
 /* ======================
@@ -227,9 +228,26 @@ footer {
 }
 .contactanos{
       justify-content: center;
-
 }
 
+footer input, footer textarea, footer button {
+   padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+  footer button {
+  background: #00bcd4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer button:hover {
+  background: #0097a7;
+}
 /* ======================
    RESPONSIVE
 ====================== */
@@ -283,4 +301,46 @@ footer {
     .card {
         width: 95%;
     }
+}
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .seccion-punto-venta {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Móviles medianos */
+@media (max-width: 600px) {
+  .navbar .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tex h1 {
+    font-size: 24px;
+  }
+
+  .cajas-prod {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .btn-contacto {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .contac-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
