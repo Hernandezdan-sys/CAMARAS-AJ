@@ -92,6 +92,7 @@ body, html {
     }
 
     .Info-contacto{
+   display:flex;/*Poner texto enfrente del otro*/
   gap: 50px;/*Espacio entre los textos*/
     }
 
@@ -100,39 +101,36 @@ body, html {
   display: flex;
   justify-content:space-around; /* logo a la izq, menú a la der */
   align-items: center;
-  background-color: #ffffff;
+  background-color: #323232;
   position: fixed;   /* siempre arriba */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 118%;
   z-index: 0;
 }
 
 /* Ajuste logo */
 .logo{
-  height: 70px;
-  width: auto;
+  max-width: 120px;
+  height: auto;
 }
 
-/* Menú */
-.menu {
-  list-style: none;
+.navbar .menu {
   display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+  list-style: none;
+  gap: 20px;
 }
 
-.menu a {
-  color: rgb(0, 0, 0);
+.navbar .menu li a {
   text-decoration: none;
+  color: #fff;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.menu a:hover {
-  text-decoration: underline;
+.navbar .menu li a:hover {
+  color: #00bcd4;
 }
-
 /* Scroll suave */
 html {
   scroll-behavior: smooth;
