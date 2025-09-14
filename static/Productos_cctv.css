@@ -12,22 +12,22 @@ body {
   background: #f7f7f7;
   color: #333;
   scroll-behavior: smooth;
-  margin-top: 0;    
-    }
+  margin: 0;  
+}
 
 /* ======================
    NAVBAR
 ====================== */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #323232;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #323232;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo img {
@@ -56,15 +56,15 @@ body {
    HERO
 ====================== */
 .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #393939;
-    color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #393939;
+  color: #fff;
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 .tex{
   text-align: center;
@@ -73,9 +73,9 @@ body {
 }
 
 .Descripcion {
-    font-size: 16px;
-    max-width: 800px;
-    margin: 0 auto;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* ======================
@@ -104,7 +104,7 @@ body {
 .carrusel img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:contain;
     display: none;
 }
 
@@ -196,6 +196,10 @@ body {
 .elemento-superior {
     text-align: center;
     font-size: 14px;
+}
+.click{
+  margin-top: 30px;
+  text-decoration:underline;
 }
 
 /* ======================
@@ -344,3 +348,4 @@ footer button:hover {
     align-items: center;
   }
 }
+
