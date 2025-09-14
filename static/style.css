@@ -12,6 +12,7 @@ body {
   background: #f7f7f7;
   color: #333;
   scroll-behavior: smooth;
+  margin: 0;
      
     }
 
@@ -56,9 +57,9 @@ body {
 .Texto-inicio {
   margin-top: -70px;
   background-image: url("https://i.pinimg.com/736x/89/2d/71/892d71e1f9ab9ff93aaa10c3192c64dd.jpg"); /* Ruta de la imagen */
-  background-size: 1500px;   /* Ajusta la imagen para cubrir todo el header */
-  background-position: 50px; /* Centra la imagen */
-  color: rgb(0, 0, 0); /* Para que el texto resalte */
+  background-size: 1550px;   /* Ajusta la imagen para cubrir todo el header */
+  background-position: 10px; /* Centra la imagen */
+  color: rgb(255, 255, 255); /* Para que el texto resalte */
   text-align: center;
   padding: 80px; /* Espacio interno */
 }
