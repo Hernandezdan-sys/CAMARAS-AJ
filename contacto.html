@@ -10,136 +10,148 @@
 /* Evitar desbordes en general */
 body, html {
   overflow-x: hidden;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    margin-top: -67px;
+  }
+  header {
+    background: #515151;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0a2e5c;
+  }
+  h1, p{
+      text-align: center;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 98%;
+  }
+  button {
+    padding: 12px;
+    background: #505050;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #163b70;
+  }
+  
+  .contact-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: #eef3fa;
+    border-radius: 12px;
+  }
+
+  .Info-contacto{
+    display:flex;/*Poner texto enfrente del otro*/
+    gap: 50px;/*Espacio entre los textos*/
+    margin-left: 50px; 
+  }
+
+  /* Contenedor de logo + menú */
+  .nav-container {
+    display: flex;
+    justify-content:space-between; /* logo a la izq, menú a la der */
+    align-items: center;
+    background-color: #323232;
+    padding: 10px 20px;
+    position: sticky;   /* siempre arriba */
+    top: 0;
+    z-index: 0;
 }
 
-/* Para tablets y pantallas medianas */
+  /* Ajuste logo */
+  .logo{
+    max-width: 120px;
+    height: auto;
+  }
+
+  .navbar .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .navbar .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .navbar .menu li a:hover {
+    color: #00bcd4;
+  }
+
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Para que el contenido no quede escondido detrás del navbar fijo */
+  body {
+    padding-top: 65px;
+  }
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablets y pantallas medianas */
 @media (max-width: 1024px) {
-
+  .Info-contacto {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-
-    header {
-      background: #515151;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #0a2e5c;
-    }
-    h1, p{
-        text-align: center;
-    }
-
-    .formulario {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
-      width: 100%;
-    }
-
-    button {
-      padding: 12px;
-      background: #505050;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #163b70;
-    }
-
-    .contact-info {
-      margin-top: 30px;
-      padding: 20px;
-      background: #eef3fa;
-      border-radius: 12px;
-    }
-
-    .Info-contacto{
-   display:flex;/*Poner texto enfrente del otro*/
-  gap: 50px;/*Espacio entre los textos*/
-    }
-
-/* Contenedor de logo + menú */
-.nav-container {
-  display: flex;
-  justify-content:space-around; /* logo a la izq, menú a la der */
-  align-items: center;
-  background-color: #323232;
-  position: fixed;   /* siempre arriba */
-  top: 0;
-  left: 0;
-  width: 118%;
-  z-index: 0;
+/* Móviles medianos */
+@media (max-width: 600px) {
+  .navbar .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
-/* Ajuste logo */
-.logo{
-  max-width: 120px;
-  height: auto;
-}
-
-.navbar .menu {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.navbar .menu li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar .menu li a:hover {
-  color: #00bcd4;
-}
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Para que el contenido no quede escondido detrás del navbar fijo */
-body {
-  padding-top: 65px;
-}
   </style>
 </head>
  <!-- Contenedor que engloba logo + menú -->
@@ -170,8 +182,8 @@ body {
   <!-- modify this form HTML and place wherever you want your form -->
 <form
   action="https://formspree.io/f/xandnrqp"
-  method="POST"
->
+  method="POST">
+
   <label>
     Correo Electronico:
     <input type="email" name="email">
@@ -180,7 +192,7 @@ body {
 Descripcion:
     <textarea name="message"></textarea>
   </label>
-  <!-- your other form fields go here -->
+ <!-- Boton de enviar -->
   <button type="submit">Enviar</button>
 </form>
 
@@ -192,13 +204,13 @@ Descripcion:
       <p>📍 Dirección: BuenaVista, Jilotepec, Estado de Mexico</p>
          <p>Ingeniero: Adan Hernandez Carlos</p>
       <p>📧 Correo: carloshernandezadan@gmail.com</p>
-      <p>📞 Teléfono: 5572219156</p>
+      <p>📞 Teléfono: 5513614756</p>
 </div>
 
 <div class="contact-info2">
-          <p>📍 Dirección: San Migel de la victoria, San Francisco Soyaniquilpan, Estado de Mexico</p>
+          <p>📍 Dirección: San Migel de la victoria, Jilotepec,<br> Estado de Mexico</p>
        <p>Ingeniero: Angel De Jesus Gonzales</p>
-         <p>📧 Correo: carloshernandezadan@gmail.com</p>
+         <p>📧 Correo: angeljesusgzlschz@gmail.com</p>
            <p>📞 Teléfono: 5562140935</p>
            </div>
 </div>
