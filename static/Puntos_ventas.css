@@ -11,7 +11,8 @@ body {
   line-height: 1.6;
   background: #f7f7f7;
   color: #333;
-  scroll-behavior: smooth;    
+  scroll-behavior: smooth;  
+  margin: 0;  
     }
 
 /* =============================
@@ -81,7 +82,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 80px;
   margin: 30px auto;
   max-width: 1200px;
   padding: 10px;
@@ -113,10 +114,14 @@ body {
   padding-left: 20px;
 }
 
+
 /* =============================
    SECCIÓN PUNTO DE VENTA
 ============================= */
 .seccion-punto-venta {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -124,6 +129,7 @@ body {
   margin: 50px auto;
   padding: 20px;
   gap: 30px;
+  
 }
 
 .seccion-punto-venta .columna {
@@ -143,6 +149,7 @@ body {
 .seccion-punto-venta p {
   margin-bottom: 15px;
 }
+
 
 .btn-contacto {
   display: inline-block;
